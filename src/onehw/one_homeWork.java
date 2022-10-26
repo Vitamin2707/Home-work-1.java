@@ -1,4 +1,5 @@
 // Написать программу вычисления n-ого треугольного числа.
+package onehw;
 
 import java.util.Scanner;
 public class one_homeWork{
