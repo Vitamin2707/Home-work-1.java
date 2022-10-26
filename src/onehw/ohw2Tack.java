@@ -9,7 +9,6 @@ import java.util.concurrent.ThreadLocalRandom;
 // Реализовать алгоритм пирамидальной сортировки (HeapSort)
 public class ohw2Tack {
     
-    private static final int length = 0;
     public ohw2Tack(List<Integer> intsInRange) {
     }
 
@@ -82,20 +81,17 @@ public class ohw2Tack {
         int minRandom = 1;
         int maxRandom;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("введите макс элемент");
-        maxRandom = scanner.nextInt();
-
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("введите макс элемент");
+            maxRandom = scanner.nextInt();
+        }
         Random random = new Random(System.currentTimeMillis());
         for (int i = 0; i < array.length; i++) {
             array[i] = minRandom + random.nextInt(maxRandom - minRandom + 1);
             System.out.print(array[i] + ", ");
         }
 
-//        int n = arr.length;
-        int n = array.length;
-
-        final ohw2Tack  ob = new ohw2Tack();
+final ohw2Tack  ob = new ohw2Tack();
         ob.sort(array);
 
         System.out.println("Sorted array is");
